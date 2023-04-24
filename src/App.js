@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import NavBar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/Homepage';
-import PageOne from './pages/PageOne';
+import Login from './pages/Login';
+import Registration from './pages/Registration';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; //importing bootstrap
 
@@ -15,7 +15,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/home" element={<HomePage />} />
-        <Route path="/page1" element={<PageOne />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registration" element={<Registration />} />
       </Routes>
     </>
   );
