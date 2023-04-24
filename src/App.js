@@ -1,25 +1,23 @@
 import logo from './logo.svg';
+import NavBar from './components/Navbar';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/Homepage';
+import PageOne from './pages/PageOne';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; //importing bootstrap
+
+//Routes is from react-router-dom
+//Routes will have a Route tag
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Hello, World!</h2>
-        <p>
-          This is my first React project. :)
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>   
+      <NavBar />
+      <Routes>
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/page1" element={<PageOne />} />
+      </Routes>
+    </>
   );
 }
 
