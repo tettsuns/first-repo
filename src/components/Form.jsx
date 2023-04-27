@@ -36,7 +36,7 @@ function BasicExample() {
             <br />
             <br />
             <h2>Hi {emailAddrs}</h2>
-            <h2>Hi {passw}</h2>
+            <h2>The password is {passw}</h2>
         </Form>
     )
 }
