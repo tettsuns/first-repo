@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Homepage";
 import Login from "./pages/Login";
 import Registration from "./pages/Registration";
+import AnotherPage from "./pages/AnotherPage";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css"; //importing bootstrap
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/another" element={<AnotherPage />} />
       </Routes>
     </>
   );
