@@ -16,18 +16,27 @@ function BasicExample() {
     return (
         <Form>
             {fields.map((field) => {
-                return(
+                return(                    
                     <Form.Group className='mb-3' controlId='formBasicEmail'>
                         <Form.Label>{field.label}</Form.Label>
                         <Form.Control type={field.type} placeholder={field.placeholder}
-                        onChange={(e) => setEmailAddrs(e.target.value)}/>
+                        onChange={(e) => {
+                            if(field.label === 'Email Address') {
+                                setEmailAddrs(e.target.value)
+                            }
+                            else {
+                                setPassw(e.target.value)
+                            }
+                            }
+                        }/>
                     </Form.Group>
                 )
-            })}
+            })}            
             <Button variant='primary' type='type'>Submit</Button>
             <br />
             <br />
             <h2>Hi {emailAddrs}</h2>
+            <h2>Hi {passw}</h2>
         </Form>
     )
 }
