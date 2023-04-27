@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 
-function LoginPage() {
+function Login() {
   const containerStyle = {
     backgroundColor: "#1a202c",
     minHeight: "92vh",
@@ -19,8 +19,6 @@ function LoginPage() {
   };
 
   const buttonStyle = {
-    backgroundColor: "#1a202c",
-    borderColor: "#1a202c",
     fontWeight: 400,
     borderRadius: "20px",
     width: "50%",
@@ -47,38 +45,39 @@ function LoginPage() {
   return (
     <div style={containerStyle}>
       <Container>
+        <Row className="d-flex justify-content-center align-items-center">
+          <Col sm="6">
         <motion.div variants={formVariants} initial="hidden" animate="visible">
           <Form style={formStyle}>
             <h1 className="mb-4 text-center">Login</h1>
-            <Form.Group controlId="formBasicEmail">
+            <Form.Group controlId="formBasicEmail" className="mb-4">
               <Form.Label>Username</Form.Label>
               <Form.Control type="email" placeholder="Enter username" />
             </Form.Group>
-
-            <Form.Group controlId="formBasicPassword">
+            <Form.Group controlId="formBasicPassword" className="mb-4">
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
-
-            <Form.Group controlId="formBasicCheckbox">
+            <Form.Group controlId="formBasicCheckbox" className="mb-3">
               <Form.Check type="checkbox" label="Remember me" />
             </Form.Group>
-
             <Row>
-              <Col>
+              <Col style={{padding: "0 0 0 0"}}>
                 <Button variant="link" className="text-decoration-none">
                   Forgot password?
                 </Button>
               </Col>
-              <Col>
-                <Button style={buttonStyle}>Login</Button>
-              </Col>
+            </Row>
+            <Row className="d-flex justify-content-center">  
+                <Button variant="success" style={buttonStyle}>Login</Button>
             </Row>
           </Form>
         </motion.div>
+        </Col>
+        </Row>
       </Container>
     </div>
   );
 }
 
-export default LoginPage;
+export default Login;

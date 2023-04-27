@@ -83,7 +83,7 @@ function HomePage() {
             <motion.img
               src="./images/solgi.png"
               alt="profile"
-              className="rounded-circle"
+              className="rounded-circle App-logo"
               style={{ width: "230px", height: "230px" }}
             />
           </div>
