@@ -24,7 +24,7 @@ function BasicExample() {
                             if(field.label === 'Email Address') {
                                 setEmailAddrs(e.target.value)
                             }
-                            else {
+                            if(field.label === 'Password') {
                                 setPassw(e.target.value)
                             }
                             }
