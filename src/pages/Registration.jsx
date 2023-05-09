@@ -50,7 +50,7 @@ function Registration() {
         <motion.div variants={formVariants} initial="hidden" animate="visible">
           <Form style={formStyle}>
             <h1 className="mb-4 text-center">Registration</h1>
-            <Form.Group controlId="formBasicEmail" className="mb-3">
+            <Form.Group controlId="formGroupName" className="mb-3">
             <Row>
                 <Col>
                     <Form.Label>First Name</Form.Label>
@@ -58,21 +58,25 @@ function Registration() {
                 </Col>
                 <Col>
                 <Form.Label>Last Name</Form.Label>
-                    <Form.Control placeholder="Enter first name" />
+                    <Form.Control placeholder="Enter last name" />
                 </Col>
             </Row>
             </Form.Group>
-            <Form.Group controlId="formBasicEmail" className="mb-3">
+            <Form.Group controlId="formEmail" className="mb-3">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
             </Form.Group>
-            <Form.Group controlId="formBasicEmail" className="mb-3">
+            <Form.Group controlId="formUsername" className="mb-3">
               <Form.Label>Username</Form.Label>
               <Form.Control type="username" placeholder="Enter username" />
             </Form.Group>
-            <Form.Group controlId="formBasicPassword" className="mb-3">
+            <Form.Group controlId="formPassword" className="mb-3">
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Enter password" />
+            </Form.Group>
+            <Form.Group controlId="formConfirmPassword" className="mb-3">
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control type="password" placeholder="Enter password again" />
             </Form.Group>
             <Row className="d-flex justify-content-center">  
                 <Button variant="success" style={buttonStyle}>Register</Button>
