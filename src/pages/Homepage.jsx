@@ -1,9 +1,20 @@
-import React from "react";
+import React, {useEffect,  useState} from "react";
 import { Container, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import "../App.css";
+import axios from "axios";
 
 function HomePage() {
+  const [ resData , setData ] = useState([]);
+  useEffect(() => {
+    axios.get('https://api.publicapis.org/entries')
+    .then(response => {
+      console.log(response.data);
+      setData([response.data]);
+    });
+  }, [])
+  
+
   const profileVariants = {
     hidden: {
       opacity: 0,

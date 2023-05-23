@@ -7,6 +7,7 @@ import AnotherPage from "./pages/AnotherPage";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css"; //importing bootstrap
 
+
 //Routes is from react-router-dom
 //Routes will have a Route tag
 
